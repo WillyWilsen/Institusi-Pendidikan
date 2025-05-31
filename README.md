@@ -91,6 +91,11 @@ Beberapa visualisasi yang tersedia di dashboard antara lain:
 - Rata-rata curricular unit semester 1 berdasarkan status
 - Rata-rata curricular unit semester 2 berdasarkan status
 
+Kredensial:
+
+- email: `root@mail.com`
+- password: `root123`
+
 ## Menjalankan Sistem Machine Learning
 
 Prototype sistem machine learning ini dirancang untuk memprediksi risiko dropout siswa di Jaya Jaya Institut menggunakan model Logistic Regression. Pada tahap awal, seluruh data numerik yang sebenarnya bersifat kategorikal diubah terlebih dahulu menjadi tipe data objek agar dapat diproses dengan tepat. Selanjutnya, dilakukan preprocessing dengan menerapkan scaling pada fitur numerik agar memiliki skala yang seragam, dan encoding pada fitur kategorikal untuk mengubah nilai kategori menjadi format numerik yang dapat diterima oleh model. Karena terdapat 10 kolom yang memiliki korelasi tinggi satu sama lain, dilakukan reduksi dimensi menggunakan Principal Component Analysis (PCA) untuk merangkum informasi tersebut menjadi 3 fitur utama yang paling berpengaruh. Pipeline ini menggabungkan preprocessing, PCA, dan model Logistic Regression dalam satu alur yang terintegrasi. Data kemudian dibagi menjadi data latih dan data uji untuk melatih model dan mengukur performanya secara objektif. Model berhasil mencapai akurasi sebesar 71% pada data uji, yang menunjukkan kemampuan model dalam memprediksi siswa yang berpotensi dropout dengan cukup baik. Setelah model dilatih, sistem dapat digunakan untuk memprediksi status siswa baru dengan memberikan hasil berupa prediksi kelas.
